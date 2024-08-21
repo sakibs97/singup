@@ -33,7 +33,7 @@ const Login = () => {
     return (
         <section className="">
             <Container>
-                <div className="p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)]  w-[30%] mx-auto bg-orange-400 rounded-lg">
+                <div className="p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)]  w-full lg:w-[30%] mx-auto bg-orange-400 rounded-lg">
                     <h2 className="font-inter font-bold text-[35px] text-[#fff] mb-5">Sign in</h2>
                     <div className="relative">
                         <input
