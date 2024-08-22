@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getDatabase, ref, set } from "firebase/database";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 const Signup = () => {
     const db = getDatabase();
@@ -37,7 +38,7 @@ const Signup = () => {
         setName(newName);
 
         if (!validateName(newName)) {
-            setNameError("Name must be at least 3 characters long and contain only letters.");
+            setNameError("Name must be at least 3 characters long.");
         } else {
             setNameError("");
         }
@@ -59,7 +60,7 @@ const Signup = () => {
         setPassword(newPassword);
 
         if (!validatePassword(newPassword)) {
-            setPasswordError("Password must be at least 8 characters long, include at least one number (0-9) and one special character (@$!%*#?&).");
+            setPasswordError("Password must be at least 8 characters long, include at least one number (0-9) and one special character.");
         } else {
             setPasswordError("");
         }
@@ -97,8 +98,8 @@ const Signup = () => {
 
     return (
         <section className="">
-            <Container className="">
-                <div className="p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] w-full lg:w-[30%] mx-auto bg-orange-400 rounded-lg">
+            <Container>
+                <div className="text-center p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] w-full lg:w-[30%] mx-auto bg-orange-400 rounded-lg">
                     <h2 className="font-inter font-bold text-[35px] text-[#fff] mb-5">Sign Up</h2>
                     <div className=" mx-auto">
                         <div className="">
@@ -161,10 +162,11 @@ const Signup = () => {
 
                         <button
                             onClick={handleSignup}
-                            className="text-[#fff] font-inter font-bold text-[16px] bg-[#0b57d0] rounded-full py-2 px-5 mt-10"
+                            className="text-[#fff] font-inter font-bold text-[16px] bg-[#0b57d0] rounded-full py-2 px-5 mt-5"
                         >
                             Sign Up
                         </button>
+                        <p className="font-inter font-normal text-[17px] text-[#fff] mt-3">Already have an Account?<Link to="/login" className="hover:text-[#FB2E86] pl-1">Login</Link></p>
                     </div>
                 </div>
             </Container>
