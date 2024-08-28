@@ -2,6 +2,8 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Singup from "./components/Singup"
 import Login from "./components/Login"
 import Dashboard from "./components/Dashboard"
+import Forget from "./components/Forget"
+import NewPassword from "./components/NewPassword"
 
 
 let router = createBrowserRouter(createRoutesFromElements(
@@ -10,6 +12,8 @@ let router = createBrowserRouter(createRoutesFromElements(
       <Route index element={<Singup />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/dash" element={<Dashboard />}></Route>
+      <Route path="/forget" element={<Forget />}></Route>
+      <Route path="/reset-password" element={<NewPassword />}></Route>
     </Route>
   </>
 ))

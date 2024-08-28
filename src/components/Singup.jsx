@@ -68,7 +68,7 @@ const Signup = () => {
 
     let handleSignup = () => {
         if (passwordError) {
-            toast.error("");
+            toast.error("Please enter a valid Password");
             return;
         }
 
@@ -88,7 +88,7 @@ const Signup = () => {
                     });
                 })
                     .catch((error) => {
-                        console.error("Error during signup:", error.message);
+                        error.toast("Error during signup:");
                     });
             })
             .catch((error) => {
@@ -97,9 +97,9 @@ const Signup = () => {
     };
 
     return (
-        <section className="">
+        <section className="bg-[url('/src/assets/back.jpg')] bg-cover bg-center min-h-screen">
             <Container>
-                <div className="text-center p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] w-full lg:w-[30%] mx-auto bg-orange-400 rounded-lg">
+                <div className="text-center p-10 w-full lg:w-[30%] mx-auto rounded-lg">
                     <h2 className="font-inter font-bold text-[35px] text-[#fff] mb-5">Sign Up</h2>
                     <div className=" mx-auto">
                         <div className="">
@@ -113,7 +113,7 @@ const Signup = () => {
                                     value={name}
                                 />
                                 <label
-                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-orange-400 px-2 rounded-b-md"
+                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-[#1b1b2f] px-2 rounded-b-md"
                                 >
                                     Name
                                 </label>
@@ -132,7 +132,7 @@ const Signup = () => {
                                     value={email}
                                 />
                                 <label
-                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-orange-400 px-2 rounded-b-md"
+                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-[#1b1b2f] px-2 rounded-b-md"
                                 >
                                     Enter your E-mail
                                 </label>
@@ -152,7 +152,7 @@ const Signup = () => {
                                     value={password}
                                 />
                                 <label
-                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-orange-400 px-2 rounded-b-md"
+                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-[#1b1b2f] px-2 rounded-b-md"
                                 >
                                     Enter your password
                                 </label>

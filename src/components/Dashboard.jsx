@@ -33,7 +33,7 @@ const Dashboard = () => {
 
     let handleSignOut = () => {
         signOut(auth).then(() => {
-            toast.success("Signed in successfully!");
+            toast.success("Signed Out successfully!");
             setTimeout(() => {
                 navigate("/");
             }, 2000);
@@ -43,9 +43,9 @@ const Dashboard = () => {
     }
 
     return (
-        <section className="bg-[#413f3f] py-10">
+        <section className="bg-[url('/src/assets/back.jpg')] bg-cover bg-center min-h-screen py-10">
             <Container>
-                <div className="p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)]  w-full lg:w-[30%] mx-auto bg-orange-400 rounded-lg font-inter font-normal text-[#fff] text-[17px]">
+                <div className="p-10 w-full lg:w-[30%] mx-auto rounded-lg font-inter font-normal text-[#fff] text-[17px]">
                     {data ? (
                         <ul>
                             <li className="">Name: {data.username}</li>

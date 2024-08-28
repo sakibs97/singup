@@ -66,9 +66,9 @@ const Login = () => {
     };
 
     return (
-        <section className="">
+        <section className="bg-[url('/src/assets/back.jpg')] bg-cover bg-center min-h-screen">
             <Container>
-                <div className="text-center p-10 border-[#f8b5393b] border-[2px] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)]  w-full lg:w-[30%] mx-auto bg-orange-400 rounded-lg">
+                <div className="text-center p-10 w-full lg:w-[30%] mx-auto">
                     <div className="">
                         <h2 className="font-inter font-bold text-[35px] text-[#fff] text-center">Login</h2>
                         <p className="font-inter font-normal text-[17px] text-[#fff] text-center mb-5">Please login using account detail bellow.</p>
@@ -84,7 +84,7 @@ const Login = () => {
                                 value={email}
                             />
                             <label
-                                className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-orange-400 px-2 rounded-b-md"
+                                className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-[#1b1b2f] px-2 rounded-b-md"
                             >
                                 Enter your E-mail
                             </label>
@@ -103,13 +103,16 @@ const Login = () => {
                                     value={password}
                                 />
                                 <label
-                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-orange-400 px-2 rounded-b-md"
+                                    className="absolute left-[15px] top-[2px] font-inter font-normal text-[12px] text-[#fff] transition-all duration-300 transform origin-[0] peer-placeholder-shown:top-[50%] peer-placeholder-shown:translate-y-[-50%] peer-placeholder-shown:left-[10px] peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[12px] peer-placeholder-shown:text-[#000] peer-placeholder-shown:bg-[#fff] peer-placeholder-shown:px-0 pointer-events-none bg-[#1b1b2f] px-2 rounded-b-md"
                                 >
                                     Enter your password
                                 </label>
                             </div>
                         </div>
                         {passwordError && <p className="text-[#fff] font-inter font-normal text-sm mt-0 pb-3">{passwordError}</p>}
+                    </div>
+                    <div className="items-end text-end">
+                        <Link to="/forget" className="text-[#fff]  font-inter font-bold text-[15px]">Forgot password?</Link>
                     </div>
                     <button
                         onClick={handleSignIn}
