@@ -121,7 +121,7 @@ const Login = () => {
                     >
                         Sign in
                     </button>
-                    <p className="font-inter font-normal text-[17px] text-[#fff] mt-5">Don’t have an Account?<Link to="/" className="hover:text-[#FB2E86] pl-1">Create account</Link></p>
+                    <p className="font-inter font-normal text-[17px] text-[#fff] mt-5">Don`t have an Account?<Link to="/" className="hover:text-[#FB2E86] pl-1">Create account</Link></p>
                 </div>
             </Container>
             <ToastContainer
