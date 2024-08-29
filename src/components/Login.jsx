@@ -60,10 +60,11 @@ const Login = () => {
 
             })
             .catch((error) => {
-                console.error("Error during sign-in:", error.message);
                 toast.error("Sign-in failed. Please check your email and password.");
             });
     };
+
+    // 97834261S%
 
     return (
         <section className="bg-[url('/src/assets/back.jpg')] bg-cover bg-center min-h-screen">
@@ -123,7 +124,20 @@ const Login = () => {
                     <p className="font-inter font-normal text-[17px] text-[#fff] mt-5">Don’t have an Account?<Link to="/" className="hover:text-[#FB2E86] pl-1">Create account</Link></p>
                 </div>
             </Container>
-            <ToastContainer />
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                limit={1}
+                transition:flip
+            />
         </section>
     );
 }

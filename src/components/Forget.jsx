@@ -3,6 +3,7 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const Forget = () => {
     const auth = getAuth();
     let navigate = useNavigate();
@@ -32,8 +33,8 @@ const Forget = () => {
         if (!emailError && email) {
             sendPasswordResetEmail(auth, email)
                 .then(() => {
+                    setSuccessMessage("Password reset email sent! Please check your inbox.");
                     setTimeout(() => {
-                        setSuccessMessage("Password reset email sent! Please check your inbox.");
                         setErrorMessage("");
                         navigate("/login");
                     }, 2000);
